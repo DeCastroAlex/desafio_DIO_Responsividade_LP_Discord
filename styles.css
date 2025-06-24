@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #23272a;
+}
+
+.hero {
+  background-image: url('img/Header\ Background.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color:  #FFFFFF;
+  margin: 0 auto 20px auto;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color:  #FFFFFF;
+}
+
+.hero-buttons {
+  width: 502px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #5865f2;
+}
+
+.btn-secondary {
+  background-color: #23272a;
+  color: white;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.section.alt {
+  background-color: #f6f6f6;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content h2 {
+  max-width: 600px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 120%; 
+  color: #23272A;
+  text-align: left;
+  margin: 0 auto 20px auto;
+}
+
+.content p {
+  max-width: 600px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #23272A;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.content.vertical {
+  flex-direction: column !important;
+  text-align: center;
+}
+
+.content.vertical div {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.content.vertical h2 {
+  max-width: 600px;
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 120%;
+  color: #23272A;
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+
+.content.vertical p {
+  max-width: 600px;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #23272A;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.content.vertical img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reverse {
+  flex-direction: column-reverse;
+}
+
+footer {
+  background-color: #23272a;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: auto;
+  }
+
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .content div {
+    flex: 1;
+    padding: 0 20px;
+  }
+
+  .content img {
+    max-width: 50%;
+  }
+}
